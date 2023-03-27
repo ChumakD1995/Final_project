@@ -3,21 +3,19 @@
 }
 
 .navigation {
+    padding-bottom: 30px;
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
 .container {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 1440px;
+    max-width: 1360px;
     width: 100%;
 }
 
 .main-top {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
 .header-top {
@@ -28,13 +26,10 @@
 }
 
 .header-menu-left {
-    position: relative;
-    right: 200px;
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-start;
 }
 
 .contacts {
@@ -78,16 +73,18 @@
     text-decoration: none;
 }
 
-.menu a {
-    font-weight: bold;
-    color: #FFFFFF;
-    list-style: none;
-    text-decoration: none;
-}
+.menu {
+    a {
+        font-weight: bold;
+        color: #FFFFFF;
+        list-style: none;
+        text-decoration: none;
+    }
 
-.menu li {
-    display: inline-block;
-    padding: 0 5px 0;
+    li {
+        display: inline-block;
+        padding: 0 5px 0;
+    }
 }
 
 .title-image-wrap h1 {
@@ -104,18 +101,52 @@
     position: relative;
     width: 581px;
     height: 800px;
+    left: 300px;
     background-image: url(../images/img-01.svg);
 }
 
-.button-main-top a:hover {
-    color: #F0145A;
+.next {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    position: absolute;
+    left: 50%;
+    font-size: 0;
+    line-height: 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -3px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 15px;
+        height: 15px;
+        border-right: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+    }
 }
+
+.next:hover {
+    border-color: #F0145A;
+
+    &:after {
+        border-right: 2px solid #F0145A;
+        border-bottom: 2px solid #F0145A;
+    }
+}
+
+// .button-main-top a:hover {
+//     background-image: url(../images/logo-18.svg);
+// }
 
 .button-main-top {
     position: relative;
     bottom: 70px;
-    text-align: center;
-    color: #F0145A;
+    left: 100px;
 }
 
 .color-button-mid {
@@ -125,16 +156,23 @@
     background-clip: text;
 }
 
-.info-main-mid ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
-    align-content: space-between;
-    color: #B3B3BA;
-    list-style: none;
-    font-size: 38px;
-    line-height: 46px;
+.info-main-mid {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: space-between;
+        color: #B3B3BA;
+        list-style: none;
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    li {
+        padding: 20px 0;
+        font-weight: bold;
+    }
 }
 
 .infosection-main-mid {
@@ -143,27 +181,22 @@
     justify-content: center;
 }
 
-.info-main-mid li {
-    padding: 20px 0;
-    font-weight: bold;
-}
-
 .information-main-mid {
     border-left: 5px solid grey;
     padding-left: 90px;
-}
 
-.information-main-mid h2 {
-    margin-top: 80px;
-    color: #FFFFFF;
-    font-size: 30px;
-    line-height: 46px;
-} 
+    h2 {
+        margin-top: 80px;
+        color: #FFFFFF;
+        font-size: 30px;
+        line-height: 46px;
+    } 
 
-.information-main-mid span {
-    color: #FFFFFF;
-    font-size: 19px;
-    line-height: 30px;
+    span {
+        color: #FFFFFF;
+        font-size: 19px;
+        line-height: 30px;
+    }
 }
 
 .info-main-mid {
@@ -172,21 +205,21 @@
 
 .title-main-bot {
     margin-top: 40px;
-}
 
-.title-main-bot a {
-    text-decoration: none;
-    color: #24A3FF;
-    font-size: 14px;
-    line-height: 17px;
-}
+    a {
+        text-decoration: none;
+        color: #24A3FF;
+        font-size: 14px;
+        line-height: 17px;
+    }
 
-.title-main-bot h2 {
-    font-size: 38px;
-    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    h2 {
+        font-size: 38px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
 
 .list {
@@ -196,20 +229,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    li {
+        text-align: left;
+    }
 }
 
-.list li {
-    text-align: left;
-}
+.infosection-main-bot {
+    h3 {
+        color: #24A3FF;
+    }
 
-.infosection-main-bot h3 {
-    color: #24A3FF;
-}
-
-.infosection-main-bot span {
-    color: #FFFFFF;
-    font-size: 16px;
-    line-height: 26px;
+    span {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 
 .member-block {
@@ -229,24 +264,24 @@
     background: #F5F5FA;
     border: 1px solid #F5F5FA;
     border-radius: 1px 20px 20px 1px;
-}
 
-.text-member a {
-    text-decoration: none;
-    color: #24A3FF;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.text-member h3 {
-    padding-top: 5px;
-    margin: 0;
-    font-size: 38px;
-    line-height: 46px;
-    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    a {
+        text-decoration: none;
+        color: #24A3FF;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    h3 {
+        padding-top: 5px;
+        margin: 0;
+        font-size: 38px;
+        line-height: 46px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
 
 .about-member {
@@ -300,15 +335,15 @@
 .table {
     padding-top: 30px;
     background: #FFFFFF;
-}
 
-.table tr {
-    width: 360px;
-    height: 120px;
-}
+    tr {
+        width: 360px;
+        height: 120px;
+    }
 
-.table td {
-    padding: 0;
+    td {
+        padding: 0;
+    }
 }
 
 .companies {
@@ -322,11 +357,23 @@
     height: 120px;
 }
 
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .image-wrap {
+        position: initial;
+    }
+}
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .companies {
+        display: block;
+        width: 100%;
+    }
 
+    .companies tbody{
+        display: block;
+    }
 
-
-
-
-     
-
+    .companies th td {
+        display: block;
+    }
+}
